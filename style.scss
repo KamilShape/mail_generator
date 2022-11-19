@@ -1,0 +1,21 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.messages {
+    &_title {
+        text-align: center;
+    }
+    &_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    &_message {
+        width: 40%;
+        height: 100px;
+        border: 1px solid black;
+    }
+}

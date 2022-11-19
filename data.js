@@ -1,0 +1,1 @@
+const welcomes = ['Hi!', 'Welcome,', 'Godd morning,', 'Dear']

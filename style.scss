@@ -1,5 +1,6 @@
 $color1: rgb(218, 218, 218);
 $color2: rgb(240, 240, 240);
+$color3: rgb(200, 200, 200);
 $fontSize: 14px;
 * {
     font-family: 'Poppins', sans-serif;
@@ -45,6 +46,8 @@ body {
         margin: 0 auto;
     }
     &_message {
+        display: flex;
+        flex-direction: column;
         width: 45%;
         margin: 10px;
         padding: 5px;
@@ -53,7 +56,24 @@ body {
         border-radius: 10px;
         background-color: $color1;
         @media (min-width: 768px) {
+            font-size: 1.0rem;
             width: 20%;
+        }
+        @media (min-width: 1280px) {
+            font-size: 1.2rem;
+        }
+    }
+    &_addButton {
+        width: 50px;
+        margin: 5px auto;
+        padding: 2px;
+        border: none;
+        border-radius: 10px 0;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            background-color: $color3;
+            border-radius: 0 10px;
+            cursor: pointer;
         }
     }
 }

@@ -9,13 +9,16 @@ const regards_wrapper = document.querySelector('.regards')
 const makeMessages = function(wrapper, array) {
     array.forEach(el => {
         let message = document.createElement('div')
+        let message_text = document.createElement('p')
         let addButton = document.createElement('button')
         message.classList.add('messages_message')
+        message_text.classList.add('messages_text')
         addButton.classList.add('messages_addButton')
         addButton.innerText = 'ADD'
-        message.innerText = el
-        wrapper.appendChild(message)
+        message_text.innerText = el
+        message.appendChild(message_text)
         message.appendChild(addButton)
+        wrapper.appendChild(message)
     })
 }
 
@@ -23,11 +26,14 @@ makeMessages(welcomes_wrapper, welcomes)
 makeMessages(content_wrapper, content)
 makeMessages(regards_wrapper, regards)
 
-let messageArea = document.querySelector('.message');
+const messageArea = document.querySelector('.message');
+const addButtons = document.querySelectorAll('.messages_addButton')
 
-(function() {
-    messageArea.value = 'HhahAHAhAhAha'
-    messageArea.value += ' HhahAHAhAhAha'
-    console.log(messageArea)
-    console.log(wrappers)
-})();
+const addText = function(text) {
+    messageArea.value += text
+}
+
+addButtons.forEach(button => {
+    let text = button.previousElementSibling.innerText
+    button.addEventListener('click', () => addText(text))
+})

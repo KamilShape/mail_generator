@@ -1,5 +1,5 @@
-const welcomes = ['Hi!', 'Welcome,', 'Godd morning,', 'Dear,'];
-const content = ['Hi!', 'Welcome,', 'Godd morning,', 'Dear'];
+const welcomes = ['Hi!', 'Welcome...,', 'Godd morning...,', 'Dear...,'];
+const content = ['How are you?', "How it's going?", 'What did you do yesterday?', 'I have question to you: ...', "I've been ... last week.", 'All documents in attachments.', 'In response to your message, ...', 'Thanks for your message!'];
 const regards = ['Good luck!', 'Best Regards!', 'Bye!', 'Goodbye!'];
 
 const welcomes_wrapper = document.querySelector('.welcomes')

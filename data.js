@@ -42,7 +42,6 @@ const copyButton = document.querySelector('.buttons_button--copy');
 const copyMessage = async() => {
     try {
         await navigator.clipboard.writeText(messageArea.value);
-        console.log('Content copied to clipboard');
     } catch (err) {
         console.error('Failed to copy: ', err);
     }

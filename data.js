@@ -16,8 +16,7 @@ const makeMessages = function(wrapper, array) {
         addButton.classList.add('messages_addButton')
         addButton.innerText = 'ADD'
         message_text.innerText = el
-        message.appendChild(message_text)
-        message.appendChild(addButton)
+        message.append(message_text, addButton)
         wrapper.appendChild(message)
     })
 }
@@ -30,10 +29,18 @@ const messageArea = document.querySelector('.message');
 const addButtons = document.querySelectorAll('.messages_addButton')
 
 const addText = function(text) {
-    messageArea.value += text
+    messageArea.value += ' '
+    messageArea.value += text.split('.')
 }
 
 addButtons.forEach(button => {
     let text = button.previousElementSibling.innerText
     button.addEventListener('click', () => addText(text))
 })
+
+const clearButton = document.querySelector('.buttons_button--clear');
+const clearMessage = function() {
+    messageArea.value = ''
+}
+
+clearButton.addEventListener('click', clearMessage)

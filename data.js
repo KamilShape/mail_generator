@@ -34,10 +34,21 @@ const addText = function(text) {
 }
 
 addButtons.forEach(button => {
-    let text = button.previousElementSibling.innerText
-    button.addEventListener('click', () => addText(text))
-})
-
+        let text = button.previousElementSibling.innerText
+        button.addEventListener('click', () => addText(text))
+    })
+    /////////
+const copyButton = document.querySelector('.buttons_button--copy');
+const copyMessage = async() => {
+    try {
+        await navigator.clipboard.writeText(messageArea.value);
+        console.log('Content copied to clipboard');
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
+}
+copyButton.addEventListener('click', copyMessage)
+    ////////
 const clearButton = document.querySelector('.buttons_button--clear');
 const clearMessage = function() {
     messageArea.value = ''

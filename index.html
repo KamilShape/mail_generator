@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Mail Generator</title>
+</head>
+
+<body>
+    <h1 class="title">Welcome to mail generator!</h1>
+    <section class="messages">
+        <h2 class="messages_title">Welcomes</h2>
+        <div class="messages_wrapper welcomes"></div>
+    </section>
+    <section class="messages">
+        <h2 class="messages_title">Content</h2>
+        <div class="messages_wrapper content"></div>
+    </section>
+    <section class="messages">
+        <h2 class="messages_title">Regards</h2>
+        <div class="messages_wrapper regards"></div>
+    </section>
+    <h2 class="messages_title">Your message</h2>
+    <textarea class="message"></textarea>
+    <div class="buttons">
+        <button class="buttons_button buttons_button--copy">Copy content</button>
+        <button class="buttons_button buttons_button--clear">Clear</button>
+    </div>
+</body>
+<script src="data.js"></script>
+
+</html>
